@@ -23,7 +23,7 @@ spec:
     spec: # Pod spec
       containers:
       - name: amazon-container
-        image: patdada/amazon-clone:1
+        image: patdada/amazon-clone:2
         ports:
         - containerPort: 3000
         
