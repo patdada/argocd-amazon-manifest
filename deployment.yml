@@ -5,19 +5,19 @@ metadata:
   name: amazon-deployment
   namespace: default
   labels:
-    app: amazon-app
+    app: amazon-clone
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: amazon-app
+      app: amazon-clone
       tier: frontend
       version: 1.0.0
 #pod tempalte
   template:
     metadata:
       labels:
-        app: amazon-app
+        app: amazon-clone
         tier: frontend
         version: 1.0.0
     spec: # Pod spec
@@ -34,11 +34,11 @@ kind: Service
 metadata:
   name: amazon-service
   labels:
-    app: amazon-app
+    app: amazon-clone
 spec:
   type: LoadBalancer
   ports:
   - port: 80
     targetPort: 3000
   selector:
-    app: amazon-app
+    app: amazon-clone
