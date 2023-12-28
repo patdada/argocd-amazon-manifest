@@ -1,1 +1,1 @@
-# argocd-amazon-manifest# myhelmapp
+ argocd-amazon-manifest
